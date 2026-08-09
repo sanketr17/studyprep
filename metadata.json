@@ -1,0 +1,6 @@
+{
+  "name": "10th Class Board Prep Tracker & Smart Study Hub",
+  "description": "Personalized board-exam command center for Class 10 students with StudyBuddy AI assistant, syllabus tracking, notes, PYQs, doubts, daily targets, and study analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

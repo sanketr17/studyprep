@@ -1,0 +1,124 @@
+{
+  "entities": {
+    "users": {
+      "title": "users",
+      "description": "User profiles",
+      "type": "object",
+      "properties": {
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "boardName": { "type": "string" },
+        "targetPercentage": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["fullName", "email"]
+    },
+    "subjects": {
+      "title": "subjects",
+      "description": "Default subjects",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "displayOrder": { "type": "number" }
+      },
+      "required": ["name"]
+    },
+    "chapters": {
+      "title": "chapters",
+      "description": "Chapters per subject",
+      "type": "object",
+      "properties": {
+        "subjectId": { "type": "string" },
+        "chapterName": { "type": "string" },
+        "chapterNumber": { "type": "number" }
+      },
+      "required": ["subjectId", "chapterName"]
+    },
+    "userChapterProgress": {
+      "title": "userChapterProgress",
+      "description": "Student chapter completion status",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "chapterId": { "type": "string" },
+        "status": { "type": "string" },
+        "lastRevisedAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "chapterId", "status"]
+    },
+    "notes": {
+      "title": "notes",
+      "description": "Notes & Formula Vault",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "chapter": { "type": "string" },
+        "content": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "title", "content"]
+    },
+    "pyqs": {
+      "title": "pyqs",
+      "description": "Previous Year Questions",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "subject": { "type": "string" },
+        "chapter": { "type": "string" },
+        "question": { "type": "string" },
+        "marks": { "type": "number" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "question"]
+    },
+    "doubts": {
+      "title": "doubts",
+      "description": "Doubts tracker",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "subject": { "type": "string" },
+        "chapter": { "type": "string" },
+        "question": { "type": "string" },
+        "priority": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "resolvedAt": { "type": "string" }
+      },
+      "required": ["userId", "question", "priority", "status"]
+    },
+    "dailyTasks": {
+      "title": "dailyTasks",
+      "description": "Daily study targets",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "taskDescription": { "type": "string" },
+        "targetDate": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "taskDescription", "targetDate", "completed"]
+    },
+    "studySessions": {
+      "title": "studySessions",
+      "description": "Pomodoro study sessions",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "durationMinutes": { "type": "number" },
+        "sessionDate": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "durationMinutes", "sessionDate"]
+    }
+  }
+}
